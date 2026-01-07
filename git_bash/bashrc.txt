@@ -1,0 +1,27 @@
+# This file is used to customize the git_bash desktop
+# This file is to be included in the home(~) directory (~/.bashrc)
+# Restart Git Bash to apply the changes
+
+# ------------------------------------- #
+# ----- Default Path of Git Bash ------ #
+# ------------------------------------- #
+
+if [ "$PWD" = "$HOME" ]; then
+	cd /c/Users/robaz/Documents/Git_repos/
+fi
+
+
+# ---------------------------- #
+# ----- Some Git Aliases ----- #
+# ---------------------------- #
+
+alias g="git"
+alias gs="git status"
+
+# ----- Windows + Git Bash helpers ----- #
+# To open the working dir in explorer
+alias explorer="explorer.exe ."
+
+# Copies absolute path of working dir to clipboard
+alias cpwd="pwd | clip.exe"
+
