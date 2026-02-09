@@ -17,6 +17,7 @@ fi
 
 alias g="git"
 alias gs="git status"
+alias glgraph='git log --oneline --graph --decorate --all'
 
 # ----- Windows + Git Bash helpers ----- #
 # To open the working dir in explorer
