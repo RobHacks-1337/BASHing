@@ -23,6 +23,11 @@ To set command into a var use: var=$(..cmd..) or backtick(`..cmd..`)[old method]
 > use unset <var-name> to dis-assign a variable.  
 > double quote " " your expansions to preserve spaces in your variable.
 
+# Scripting:
+bash -n <script-name> : To check for any syntax errors
+echo $? : prints whether previous ran cmd is successful or no. (0-success)
+read : takes user input
+
 ---
 ## Patterns:
 

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+read -p "Whats your name: " name
+echo "Hello $name welcome to bash"
+

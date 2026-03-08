@@ -1,12 +1,15 @@
-#!/bin/bash	-- shebang
+#!/bin/bash
 
 echo Ai chan is kawaii 	# echo simply prints output in terminal
 echo "$PWD" 
-echo "$PATH" | tr : '\n'
+echo "$PATH" | tr : '\n' | tail -n2
 
 name='robin  bro  '
 foo=$(cowsay Robin is God)
-
 echo $name
 echo "$foo"  # The " " preserves the spaces and /n
+
+host=$HOSTNAME
+sl=$SHELL
+echo "hello $host you are opreating in shell: $sl"
 
