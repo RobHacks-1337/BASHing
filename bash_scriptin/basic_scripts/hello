@@ -3,3 +3,9 @@
 read -p "Whats your name: " name
 echo "Hello $name welcome to bash"
 
+age=$1 	# reads the first argument given to the program
+sex=$2 	# hopefully reads the second argument 
+
+echo "Your age is $age"
+echo "You are $sex"
+

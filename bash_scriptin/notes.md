@@ -1,4 +1,4 @@
-## Some Things to remember abt Bash:
+# Some Things to remember abt Bash:
 
 REPL - Read, Eval, Print, Loop
 - Bash terminal and the explorer(for windows) are always in sync.  
@@ -6,27 +6,32 @@ REPL - Read, Eval, Print, Loop
 
 - Paiger:- cmds that pages through the inputs: Eg: less, more  
 
-# External and shell built-in commands: 
-- can be checked using **type** command (type -a <cmd> or type <cmd>)
+## External and shell built-in commands: 
+- can be checked using **type** command: `type -a <cmd> or type <cmd>`
 - Help=man equivalent in bash. echo is both ext(/bin/echo) and builtin  
 - **compgen -b**: lists all the builtin commands 
 
-# Basic Variables:
+## Basic Variables:
 - $PATH: the bash shell cheks these path to find the commands.
 - $SHELL: what shell is being run
 - $HOME: expands the home path.
 - $PWD, $USER, $HOSTNAME, $MACHTYPE-machine-type  
 
-To set command into a var use: var=$(..cmd..) or backtick(`..cmd..`)[old method]
+To set command into a var use: var=$(..cmd..) or backtick(\`..cmd..\`)[old method]
 
 > to assign/set a variable some value simply use = .Eg: foo='wow   bruh' / echo "$foo"  
-> use unset <var-name> to dis-assign a variable.  
+> use `unset <var-name>` to dis-assign a variable.  
 > double quote " " your expansions to preserve spaces in your variable.
 
-# Scripting:
-bash -n <script-name> : To check for any syntax errors
-echo $? : prints whether previous ran cmd is successful or no. (0-success)
-read : takes user input
+## Special Variables:
+- $1: reads the first argument given to the program  
+`./script <arg1>(i.e.$1) <arg2>(i.e.$2)`
+- 
+
+## Scripting:
+bash -n <script-name> : To check for any syntax errors  
+echo $? : prints whether previous ran cmd is successful or no. (0-success)  
+read : takes user input, use -p option for prompt
 
 ---
 ## Patterns:
