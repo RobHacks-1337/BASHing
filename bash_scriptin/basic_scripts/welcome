@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+read -p "Whats your name: " name
+echo "Hello $name welcome to bash"
+
+# If argument is passed then take value from the arg else read value asking user input
+
+if [[ -n $1 ]]; then	# -n is true if string is not empty
+	age=$1 	# reads the first argument given to the program
+else
+	read -p "Whats your age: " age
+fi
+
+# or
+
+if [[ -z $2 ]]; then	# -z is true if string is empty
+	read -p "Whats your gender: " sex
+else
+	sex=$2 	# hopefully reads the second argument 
+fi
+
+echo "Your age is $age"
+echo "You are $sex"
+
+# Jus learning if statement
+
+if [[ $age -le 12 ]]; then	# -le less than or equal
+		# <= is used for string comapriosion so dont use
+	echo "What tf are you doing here?"
+else 
+	echo "Good luck learning bash scripting"
+fi
+
+
+if ! [[ -n $3 ]]; then		# !(true)-> false -> if doesnot execute !(false) -> true -> if executes
+	echo "congrats on mastering conditional statements"
+else
+	echo "you are such a fking noob bro"
+fi
+

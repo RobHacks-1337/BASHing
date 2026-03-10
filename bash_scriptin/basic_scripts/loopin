@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
-
-for thing in foo bar bat car; do
+<< 'Comment'
+for thing in foo bar lat bat; do
 	echo "thing is $thing"
 done
+
+arr=1 2 3 4 5
+
+for list in $arr; do
+	echo $list
+done
+
+Comment
 

@@ -11,6 +11,7 @@ REPL - Read, Eval, Print, Loop
 - Help=man equivalent in bash. echo is both ext(/bin/echo) and builtin  
 - **compgen -b**: lists all the builtin commands 
 
+---
 ## Basic Variables:
 - $PATH: the bash shell cheks these path to find the commands.
 - $SHELL: what shell is being run
@@ -24,14 +25,33 @@ To set command into a var use: var=$(..cmd..) or backtick(\`..cmd..\`)[old metho
 > double quote " " your expansions to preserve spaces in your variable.
 
 ## Special Variables:
+
+Positional Parameters:
 - $1: reads the first argument given to the program  
 `./script <arg1>(i.e.$1) <arg2>(i.e.$2)`
 - 
 
+---
 ## Scripting:
-bash -n <script-name> : To check for any syntax errors  
+`bash -n <script-name>` : To check for any syntax errors  
 echo $? : prints whether previous ran cmd is successful or no. (0-success)  
 read : takes user input, use -p option for prompt
+
+## Operators:
+Numeric Operators: 		# Use for numeric comparisions
+- -lt (less than)
+- -le (less than or equal)
+- -gt (greater than)
+- -ge (greater than or equal)
+- -eq (equal) 
+- -ne (not equal)
+> Donot use the symbolic equivalent, they are used to compare strings only
+
+String Operators: ==,!=,>,<
+
+## Comments:
+- # : for single line comment
+- << 'Comment'	 ....line1 ....line2	Comment : for multi line/block comments.
 
 ---
 ## Patterns:
