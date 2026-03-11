@@ -11,5 +11,7 @@ echo "$foo"  # The " " preserves the spaces and /n
 
 host=$HOSTNAME
 sl=$SHELL
-echo "hello $host you are opreating in shell: $sl"
+echo "hello $host how are you"
 
+echo "Shell: $sl"
+echo "Script: $0"

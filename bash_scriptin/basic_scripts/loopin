@@ -4,11 +4,26 @@ for thing in foo bar lat bat; do
 	echo "thing is $thing"
 done
 
-arr=1 2 3 4 5
+
+# Array
+declare -A arr
+arr[1]= "foo"
+arr[2]= "bat"
+arr[3]= "cat tat"
 
 for list in $arr; do
 	echo $list
 done
 
 Comment
+
+# Printing all arguments passed 
+declare -i cnt=0	# explicitly defining var as integer
+i=0		# i is initially a string
+
+for arg in "$@"; do
+	echo "argument $((++i)) is $arg"
+	cnt+=1
+	echo $cnt
+done
 
