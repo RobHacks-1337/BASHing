@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+a=2
+b=2
+if [[ $a -eq $b ]]; then
+	echo '$a and $b are equal'
+fi
+
+echo
+if [[ -f file.txt ]]; then		# -f checks if it is a file or not
+	echo 'file.txt exists and is a file'
+fi
+
+<< Comment
+if apt update; then		# We can just directly put command into it like this
+	sudo apt upgrade
+fi
+
+Comment
+
+echo $?
+

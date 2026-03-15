@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+
+# For loop
 << 'Comment'
 for thing in foo bar lat bat; do
 	echo "thing is $thing"
@@ -27,3 +29,27 @@ for arg in "$@"; do
 	echo $cnt
 done
 
+echo
+for thing in {a..f}; do		# {1..n} expands alphabets/numbers
+	echo -ne "$thing\t"
+done
+
+echo
+# C-style for loops
+max=5
+for ((i=0; i<max; i++)); do		#((..)) use for arithmetic operations/ math mode
+	echo "i is $i (in c)"
+done
+
+
+echo
+# While loop
+while [[ -f file.txt ]]; do
+	echo 'file.txt exists'
+	sleep 1
+done
+
+echo 'file.txt no longer exists'
+
+# Until loop is just opposite of while loop 
+# Syntax:until ...; do ... done

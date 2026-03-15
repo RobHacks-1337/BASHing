@@ -37,6 +37,9 @@ To set command into a var use: var=$(..cmd..) or backtick(\`..cmd..\`)[old metho
 > use `unset <var-name>` to dis-assign a variable.  
 > double quote " " your expansions to preserve spaces in your variable.
 
+
+- use local <\var>\ : to make variables local; if not used variables will be global
+
 ## Special Variables:
 
 Positional Parameters:
@@ -54,7 +57,12 @@ Positional Parameters:
 # Bash Scripting:
 `bash -n <script-name>` : To check for any syntax errors  
 echo $? : prints whether previous ran cmd is successful or no. (0-success)  
-read : takes user input, use -p option for prompt
+read : takes user input, use -p option for prompt  
+
+**Some things**
+"": allows variable expansion inside quotes ,'': doesnot allow variable expansion inside quotes  
+Boolean: true (0) | false (1)  
+
 
 ## Operators:
 Numeric Operators: 		# Use for numeric comparisions

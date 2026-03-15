@@ -15,3 +15,6 @@ echo "hello $host how are you"
 
 echo "Shell: $sl"
 echo "Script: $0"
+
+echo -ne "$thing\t" 	# -n: keeps output in same line
+	                # -e: enables interpretation of escape characters
